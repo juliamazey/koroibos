@@ -12,9 +12,11 @@ let csvStream = csv.fromPath("data.csv", {headers: true})
   let sex = record.Sex;
   let age = record.Age;
   let team = record.Team;
+  let height = record.Height === 'NA' ? null : record.Height;;
+  let weight = record.Weight === 'NA' ? null : record.Weight;;
   let sport = record.Sport;
   let title = record.Event;
-  let medal = record.Medal;
+  let medal = record.Medal === 'NA' ? null : record.Medal;
 
   Event.findOrCreate({
     where: {
@@ -29,7 +31,9 @@ let csvStream = csv.fromPath("data.csv", {headers: true})
         age: age,
         team: team,
         sport: sport,
-        medal: medal
+        medal: medal,
+        height: height,
+        weight: weight
       }
     }).then(olympian => {
       var olympian_id = olympian[0].id

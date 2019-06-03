@@ -17,6 +17,12 @@ module.exports = {
       age: {
         type: Sequelize.INTEGER
       },
+      height: {
+        type: Sequelize.INTEGER
+      },
+      weight: {
+        type: Sequelize.INTEGER
+      },
       sport: {
         type: Sequelize.STRING
       },
