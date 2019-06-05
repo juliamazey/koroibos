@@ -6,13 +6,14 @@ This project is the final solo project for Mod 4 students at Turing School of So
 
 To run the project locally, you will need to clone down the repo:
 	
-	``` git clone https://github.com/juliamarco/koroibos.git```
+	git clone https://github.com/juliamarco/koroibos.git
  
 You will need to install node packages
 
-	```npm install```
+	npm install
     
-Then you will need to create, migrate, and import the data 
+Then you will need to create, migrate, and import the data:
+
 	```
 	npx sequelize db:create
 	npx sequelize db:migrate
@@ -20,7 +21,7 @@ Then you will need to create, migrate, and import the data
 	```
 Finally, you can start each of the three apps locally
 
-	```npm start```
+	npm start
 
 ## API Endpoints
 
@@ -93,9 +94,10 @@ api/v1/olympians?age=oldest
   
 Users can retrieve some olympian stats, such as the total count of olympians, their average weight or age by making a request to the olympian_stats endpoint:
   
-	```api/v1/olympian_stats```
+	api/v1/olympian_stats
   
 If the request is successful, stats will be returned in the following format:
+
 	```
 	{
 	  "olympian_stats": {
@@ -115,6 +117,7 @@ Users can retrieve all events in the database by making a request to the followi
   ```api/v1/events```
 
 If the request is successful, events will be returned in the following format:
+
 	```
 	{
 	  "events":
