@@ -14,11 +14,11 @@ You will need to install node packages
     
 Then you will need to create, migrate, and import the data:
 
-	```
+	
 	npx sequelize db:create
 	npx sequelize db:migrate
 	node seeders.js
-	```
+	
 Finally, you can start each of the three apps locally
 
 	npm start
@@ -98,7 +98,7 @@ Users can retrieve some olympian stats, such as the total count of olympians, th
   
 If the request is successful, stats will be returned in the following format:
 
-	```
+	
 	{
 	  "olympian_stats": {
 	    "total_competing_olympians": 3120
@@ -110,7 +110,7 @@ If the request is successful, stats will be returned in the following format:
 	    "average_age:" 26.2
 	  }
 	}
-	```
+	
 	
 ### GET Events
 Users can retrieve all events in the database by making a request to the following endpoint:
@@ -118,7 +118,7 @@ Users can retrieve all events in the database by making a request to the followi
 
 If the request is successful, events will be returned in the following format:
 
-	```
+	
 	{
 	  "events":
 	    [
@@ -144,7 +144,7 @@ If the request is successful, events will be returned in the following format:
 	      {...}
 	    ]
 	}
-	```
+	
 	
 	
 ### GET Medalists for an event
@@ -154,7 +154,7 @@ Users can retrieve all medalists for a particular event by making a request to t
 
 If the request is successful, data will be returned in the following format:
 
-	```
+	
 	{
 	  "event": "Badminton Mixed Doubles",
 	  "medalists": [
@@ -172,7 +172,7 @@ If the request is successful, data will be returned in the following format:
 	      }
 	    ]
 	}
-	```
+	
   
 ## Tech Stack
 - [Node.js](https://nodejs.org/en/)
