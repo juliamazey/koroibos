@@ -5,22 +5,22 @@ This project is the final solo project for Mod 4 students at Turing School of So
 ## Local Setup
 
 To run the project locally, you will need to clone down the repo:
-
- ``` git clone https://github.com/juliamarco/koroibos.git```
+	
+	``` git clone https://github.com/juliamarco/koroibos.git```
  
 You will need to install node packages
 
-    ```npm install```
+	```npm install```
     
 Then you will need to create, migrate, and import the data 
-  ```
-      npx sequelize db:create
-      npx sequelize db:migrate
-      node seeders.js
-  ```
+	```
+	npx sequelize db:create
+	npx sequelize db:migrate
+	node seeders.js
+	```
 Finally, you can start each of the three apps locally
 
-  ```npm start```
+	```npm start```
 
 ## API Endpoints
 
@@ -30,7 +30,7 @@ You can make API requests to the following endpoints:
 ### GET Olympians
 
 Users can retrieve all olympians in the database by making a request to the following endpoint:
-  ```api/v1/olympians```
+	```api/v1/olympians```
 
 If the request is successful, olympians will be returned in the following format:
 ```
@@ -54,16 +54,15 @@ If the request is successful, olympians will be returned in the following format
 	      {...}
 	    ]
 	}
-	```
+```
 	
 ### GET oldest and youngest olympian
   
 Users can retrieve the oldest or the youngest olympian by adding a query param to the previous endpoint:
 If the request is successful, olympian will be returned in the format below:
 
-    ```api/v1/olympians?age=youngest```
- 
-	```
+```
+api/v1/olympians?age=youngest
 	{
 	  [
 	    {
@@ -75,10 +74,8 @@ If the request is successful, olympian will be returned in the format below:
 	    }
 	  ]
 	}
-	```
-	
-    ```api/v1/olympians?age=oldest```
-	```
+
+api/v1/olympians?age=oldest
 	{
 	  [
 	    {
@@ -90,13 +87,13 @@ If the request is successful, olympian will be returned in the format below:
 	    }
 	  ]
 	}
-	```
+```
 	
 ### GET Olympian Stats
   
 Users can retrieve some olympian stats, such as the total count of olympians, their average weight or age by making a request to the olympian_stats endpoint:
   
-  ```api/v1/olympian_stats```
+	```api/v1/olympian_stats```
   
 If the request is successful, stats will be returned in the following format:
 	```
@@ -113,7 +110,6 @@ If the request is successful, stats will be returned in the following format:
 	}
 	```
 	
-  
 ### GET Events
 Users can retrieve all events in the database by making a request to the following endpoint:
   ```api/v1/events```
@@ -124,51 +120,52 @@ If the request is successful, events will be returned in the following format:
 	  "events":
 	    [
 	      {
-	        "sport": "Archery",
-	        "events": [
-	          "Archery Men's Individual",
-	          "Archery Men's Team",
-	          "Archery Women's Individual",
-	          "Archery Women's Team"
-	        ]
+		"sport": "Archery",
+		"events": [
+		  "Archery Men's Individual",
+		  "Archery Men's Team",
+		  "Archery Women's Individual",
+		  "Archery Women's Team"
+		]
 	      },
 	      {
-	        "sport": "Badminton",
-	        "events": [
-	          "Badminton Men's Doubles",
-	          "Badminton Men's Singles",
-	          "Badminton Women's Doubles",
-	          "Badminton Women's Singles",
-	          "Badminton Mixed Doubles"
-	        ]
+		"sport": "Badminton",
+		"events": [
+		  "Badminton Men's Doubles",
+		  "Badminton Men's Singles",
+		  "Badminton Women's Doubles",
+		  "Badminton Women's Singles",
+		  "Badminton Mixed Doubles"
+		]
 	      },
 	      {...}
 	    ]
 	}
 	```
 	
-	### GET Medalists for an event
+	
+### GET Medalists for an event
   
 Users can retrieve all medalists for a particular event by making a request to the following endpoint:
-  ```api/v1/events/:id/medalists```
+	```api/v1/events/:id/medalists```
 
 If the request is successful, data will be returned in the following format:
-  
+
 	```
 	{
 	  "event": "Badminton Mixed Doubles",
 	  "medalists": [
 	      {
-	        "name": "Tontowi Ahmad",
-	        "team": "Indonesia-1",
-	        "age": 29,
-	        "medal": "Gold"
+		"name": "Tontowi Ahmad",
+		"team": "Indonesia-1",
+		"age": 29,
+		"medal": "Gold"
 	      },
 	      {
-	        "name": "Chan Peng Soon",
-	        "team": "Malaysia",
-	        "age": 28,
-	        "medal": "Silver"
+		"name": "Chan Peng Soon",
+		"team": "Malaysia",
+		"age": 28,
+		"medal": "Silver"
 	      }
 	    ]
 	}
