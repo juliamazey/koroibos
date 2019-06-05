@@ -5,6 +5,7 @@ This project is the final solo project for Mod 4 students at Turing School of So
 ## Local Setup
 
 To run the project locally, you will need to clone down the repo:
+
  ``` git clone https://github.com/juliamarco/koroibos.git```
  
 You will need to install node packages
